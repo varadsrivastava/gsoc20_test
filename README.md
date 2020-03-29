@@ -19,7 +19,11 @@ Essentially, when we come to use of neural networks in real life problems usage,
 Transfer learning comes to the rescue here, as it allows us to use a pretrained model as a feature extractor for a problem, where our problem dataset is similar to the data on which it was pre-trained. Fine-tuning of the weights through the whole network is also useful in cases, where new dataset is large as well as similar to the original one.
 
 ###	Can you install TensorFlow in your machine and implement a simple CNN on MNIST by TF estimator API following the official document?
-#### Answer : Yes. Kindly refer to Test.py
+#### Answer : 
+Yes, I can install Tensorflow in my machine. However, I'm not able to properly implement the aforementioned following the official document. Official document is not updated for TensorFlow 2.0. feature_columns have been moved to tfdatasets recently, and I tried to go around that, as well as also use 'feature_specs' in tfdatasets. Currently, I'm stuck with the error "got an unexpected keyword argument 'input_layer_partitioner'". Input layer partitioners are supposed to be defined explicitely, and otherwise default to min_max_variable_partitioner, according to the official documentation here (https://tensorflow.rstudio.com/reference/tfestimators/dnn_estimators/). They have however been removed in the latest TensorFlow according to the Python version. I'm not sure that the documentation is updated.
+
+However, I have attached the code here as ####Test.R 
+And I'll keep trying to run it successfully.
 
 
 ## Medium :
@@ -43,5 +47,6 @@ If the loss doesn’t converge, we should do one of the following :
 2.	We should check the magnitudes of gradients to see if they are exploding or vanishing. If they are, we should use an adaptive optimizer.
 
 ###	Can you implement a simple CNN without estimator API?
-Answer : Yes, kindly refer to Test2.py
+####Answer : 
+Yes, kindly refer to Test2.R
 
